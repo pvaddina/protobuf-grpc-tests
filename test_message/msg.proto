@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+message Defs {
+  enum PowerState {
+    INVALID = 0;
+    OFF = 1;
+    ON = 2;
+  }
+
+  enum MeasType {
+    TEMPERATURE = 0;
+    HUMIDITY = 1;
+    TEMPERATURE_AND_HUMIDITY = 2;
+  }
+}
+
+message CSensorInitReq {
+  string name = 1;
+  Defs.PowerState power= 2;
+  Defs.MeasType measType= 3;  
+}
