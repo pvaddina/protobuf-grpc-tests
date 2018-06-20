@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "base.proto";
+
+enum OnOff
+{
+  INVALID = 0;
+  ON = 1;
+  OFF = 2;
+  ON_BUT_NOT_WORKING = 3;
+}
+
+enum Result
+{
+  SUCCESS = 0;
+  ERROR = 1;
+}
+
+message CDhtConfigReq
+{
+  Base.BaseMsg baseId = 1;
+  OnOff state = 2;
+}
+
+message CDhtConfigCnf
+{
+  Result result = 1;
+  OnOff state = 2;
+}
+
+
+
+
