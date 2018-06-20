@@ -3,6 +3,8 @@
 *.exe
 *.out
 *.obj
+*.ORIG
+*.orig
 
 build/
 
