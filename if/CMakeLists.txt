@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 project(dummy_interface_definitions)
 
-set(Protobuf_LIBRARIES "c:/Program Files (x86)/protobuf/lib")
-set(Protobuf_INCLUDE_DIR "c:/Program Files (x86)/protobuf/include")
+set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
+set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
 #message("Current module path before setting=${CMAKE_MODULE_PATH}")
 #set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "c:/Program Files (x86)/protobuf/lib/cmake/protobuf")
 #message("Current module path=${CMAKE_MODULE_PATH}")

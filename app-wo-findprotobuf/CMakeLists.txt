@@ -21,16 +21,15 @@ function(concat_path iL oL cVal)
 endfunction()
 
 
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/cpp/third_party/install/bin/protoc.exe")
-set(Protobuf_LIBRARIES "C:/Users/praka/workspace/cpp/third_party/install/lib")
-set(Protobuf_INCLUDE_DIRS "c:/Users/praka/workspace/cpp/third_party/protobuf/src/")
+set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
+set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
+set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 
 set(PROTO_SRCS base.proto dht.proto)
 
-include_directories(${Protobuf_INCLUDE_DIRS})
 
 foreach(pfile ${PROTO_SRCS}) 
   string(REPLACE ".proto" ".pb" fname ${pfile})
@@ -52,6 +51,8 @@ set (GEN_DEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/gen)
 file(MAKE_DIRECTORY ${GEN_DEST_DIR})
 message("GEN_DEST_DIR = " ${GEN_DEST_DIR})
 
+include_directories(${Protobuf_INCLUDE_DIRS})
+include_directories(${GEN_DEST_DIR})
 
 add_custom_command(OUTPUT ${PROTO_CPP_SRCS_PATH}
   COMMAND ${Protobuf_PROTOC_EXECUTABLE} --cpp_out=${GEN_DEST_DIR} --proto_path=${CMAKE_CURRENT_SOURCE_DIR} ${PROTO_SRCS_PATH}
