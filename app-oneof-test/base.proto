@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+message CHeatingCtrl
+{
+  string name = 1;
+  double currentTemp = 2;
+  double desiredTemp = 3;
+}
+
+message CLightingCtrl
+{
+  enum LightOnOff
+  {
+    OFF = 0;
+    ON = 1;
+  }
+  string name = 1;
+  LightOnOff livingRoom = 2;
+  LightOnOff bedRoom = 3;
+  LightOnOff kitchenRoom = 4;
+}
+
+message CShadesCtrl
+{
+  enum OpenUpto
+  {
+    CLOSE = 0;
+    OPEN = 1;
+  }
+  OpenUpto state = 1;
+  int32 currentOpenPercentage = 2;
+}
+
+message CHomeAutoParams
+{
+  string homeAddress = 1;
+  oneof action {
+    CHeatingCtrl heating = 2;
+    CLightingCtrl lighting = 3;
+    CShadesCtrl   shades = 4;
+  }
+}
+
+
+
