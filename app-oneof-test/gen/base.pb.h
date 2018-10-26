@@ -67,47 +67,47 @@ template<> ::CShadesCtrl* Arena::CreateMaybeMessage<::CShadesCtrl>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 
-enum CLightingCtrl_LightOnOff {
-  CLightingCtrl_LightOnOff_OFF = 0,
-  CLightingCtrl_LightOnOff_ON = 1,
-  CLightingCtrl_LightOnOff_CLightingCtrl_LightOnOff_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  CLightingCtrl_LightOnOff_CLightingCtrl_LightOnOff_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum LightOnOff {
+  OFF = 0,
+  ON = 1,
+  LightOnOff_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  LightOnOff_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool CLightingCtrl_LightOnOff_IsValid(int value);
-const CLightingCtrl_LightOnOff CLightingCtrl_LightOnOff_LightOnOff_MIN = CLightingCtrl_LightOnOff_OFF;
-const CLightingCtrl_LightOnOff CLightingCtrl_LightOnOff_LightOnOff_MAX = CLightingCtrl_LightOnOff_ON;
-const int CLightingCtrl_LightOnOff_LightOnOff_ARRAYSIZE = CLightingCtrl_LightOnOff_LightOnOff_MAX + 1;
+bool LightOnOff_IsValid(int value);
+const LightOnOff LightOnOff_MIN = OFF;
+const LightOnOff LightOnOff_MAX = ON;
+const int LightOnOff_ARRAYSIZE = LightOnOff_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* CLightingCtrl_LightOnOff_descriptor();
-inline const ::std::string& CLightingCtrl_LightOnOff_Name(CLightingCtrl_LightOnOff value) {
+const ::google::protobuf::EnumDescriptor* LightOnOff_descriptor();
+inline const ::std::string& LightOnOff_Name(LightOnOff value) {
   return ::google::protobuf::internal::NameOfEnum(
-    CLightingCtrl_LightOnOff_descriptor(), value);
+    LightOnOff_descriptor(), value);
 }
-inline bool CLightingCtrl_LightOnOff_Parse(
-    const ::std::string& name, CLightingCtrl_LightOnOff* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CLightingCtrl_LightOnOff>(
-    CLightingCtrl_LightOnOff_descriptor(), name, value);
+inline bool LightOnOff_Parse(
+    const ::std::string& name, LightOnOff* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<LightOnOff>(
+    LightOnOff_descriptor(), name, value);
 }
-enum CShadesCtrl_OpenUpto {
-  CShadesCtrl_OpenUpto_CLOSE = 0,
-  CShadesCtrl_OpenUpto_OPEN = 1,
-  CShadesCtrl_OpenUpto_CShadesCtrl_OpenUpto_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  CShadesCtrl_OpenUpto_CShadesCtrl_OpenUpto_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum OpenUpto {
+  CLOSE = 0,
+  OPEN = 1,
+  OpenUpto_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  OpenUpto_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool CShadesCtrl_OpenUpto_IsValid(int value);
-const CShadesCtrl_OpenUpto CShadesCtrl_OpenUpto_OpenUpto_MIN = CShadesCtrl_OpenUpto_CLOSE;
-const CShadesCtrl_OpenUpto CShadesCtrl_OpenUpto_OpenUpto_MAX = CShadesCtrl_OpenUpto_OPEN;
-const int CShadesCtrl_OpenUpto_OpenUpto_ARRAYSIZE = CShadesCtrl_OpenUpto_OpenUpto_MAX + 1;
+bool OpenUpto_IsValid(int value);
+const OpenUpto OpenUpto_MIN = CLOSE;
+const OpenUpto OpenUpto_MAX = OPEN;
+const int OpenUpto_ARRAYSIZE = OpenUpto_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* CShadesCtrl_OpenUpto_descriptor();
-inline const ::std::string& CShadesCtrl_OpenUpto_Name(CShadesCtrl_OpenUpto value) {
+const ::google::protobuf::EnumDescriptor* OpenUpto_descriptor();
+inline const ::std::string& OpenUpto_Name(OpenUpto value) {
   return ::google::protobuf::internal::NameOfEnum(
-    CShadesCtrl_OpenUpto_descriptor(), value);
+    OpenUpto_descriptor(), value);
 }
-inline bool CShadesCtrl_OpenUpto_Parse(
-    const ::std::string& name, CShadesCtrl_OpenUpto* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<CShadesCtrl_OpenUpto>(
-    CShadesCtrl_OpenUpto_descriptor(), name, value);
+inline bool OpenUpto_Parse(
+    const ::std::string& name, OpenUpto* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<OpenUpto>(
+    OpenUpto_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -321,32 +321,6 @@ class CLightingCtrl : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // nested types ----------------------------------------------------
 
-  typedef CLightingCtrl_LightOnOff LightOnOff;
-  static const LightOnOff OFF =
-    CLightingCtrl_LightOnOff_OFF;
-  static const LightOnOff ON =
-    CLightingCtrl_LightOnOff_ON;
-  static inline bool LightOnOff_IsValid(int value) {
-    return CLightingCtrl_LightOnOff_IsValid(value);
-  }
-  static const LightOnOff LightOnOff_MIN =
-    CLightingCtrl_LightOnOff_LightOnOff_MIN;
-  static const LightOnOff LightOnOff_MAX =
-    CLightingCtrl_LightOnOff_LightOnOff_MAX;
-  static const int LightOnOff_ARRAYSIZE =
-    CLightingCtrl_LightOnOff_LightOnOff_ARRAYSIZE;
-  static inline const ::google::protobuf::EnumDescriptor*
-  LightOnOff_descriptor() {
-    return CLightingCtrl_LightOnOff_descriptor();
-  }
-  static inline const ::std::string& LightOnOff_Name(LightOnOff value) {
-    return CLightingCtrl_LightOnOff_Name(value);
-  }
-  static inline bool LightOnOff_Parse(const ::std::string& name,
-      LightOnOff* value) {
-    return CLightingCtrl_LightOnOff_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
   // string name = 1;
@@ -363,23 +337,23 @@ class CLightingCtrl : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
 
-  // .CLightingCtrl.LightOnOff livingRoom = 2;
+  // .LightOnOff livingRoom = 2;
   void clear_livingroom();
   static const int kLivingRoomFieldNumber = 2;
-  ::CLightingCtrl_LightOnOff livingroom() const;
-  void set_livingroom(::CLightingCtrl_LightOnOff value);
+  ::LightOnOff livingroom() const;
+  void set_livingroom(::LightOnOff value);
 
-  // .CLightingCtrl.LightOnOff bedRoom = 3;
+  // .LightOnOff bedRoom = 3;
   void clear_bedroom();
   static const int kBedRoomFieldNumber = 3;
-  ::CLightingCtrl_LightOnOff bedroom() const;
-  void set_bedroom(::CLightingCtrl_LightOnOff value);
+  ::LightOnOff bedroom() const;
+  void set_bedroom(::LightOnOff value);
 
-  // .CLightingCtrl.LightOnOff kitchenRoom = 4;
+  // .LightOnOff kitchenRoom = 4;
   void clear_kitchenroom();
   static const int kKitchenRoomFieldNumber = 4;
-  ::CLightingCtrl_LightOnOff kitchenroom() const;
-  void set_kitchenroom(::CLightingCtrl_LightOnOff value);
+  ::LightOnOff kitchenroom() const;
+  void set_kitchenroom(::LightOnOff value);
 
   // @@protoc_insertion_point(class_scope:CLightingCtrl)
  private:
@@ -479,39 +453,13 @@ class CShadesCtrl : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // nested types ----------------------------------------------------
 
-  typedef CShadesCtrl_OpenUpto OpenUpto;
-  static const OpenUpto CLOSE =
-    CShadesCtrl_OpenUpto_CLOSE;
-  static const OpenUpto OPEN =
-    CShadesCtrl_OpenUpto_OPEN;
-  static inline bool OpenUpto_IsValid(int value) {
-    return CShadesCtrl_OpenUpto_IsValid(value);
-  }
-  static const OpenUpto OpenUpto_MIN =
-    CShadesCtrl_OpenUpto_OpenUpto_MIN;
-  static const OpenUpto OpenUpto_MAX =
-    CShadesCtrl_OpenUpto_OpenUpto_MAX;
-  static const int OpenUpto_ARRAYSIZE =
-    CShadesCtrl_OpenUpto_OpenUpto_ARRAYSIZE;
-  static inline const ::google::protobuf::EnumDescriptor*
-  OpenUpto_descriptor() {
-    return CShadesCtrl_OpenUpto_descriptor();
-  }
-  static inline const ::std::string& OpenUpto_Name(OpenUpto value) {
-    return CShadesCtrl_OpenUpto_Name(value);
-  }
-  static inline bool OpenUpto_Parse(const ::std::string& name,
-      OpenUpto* value) {
-    return CShadesCtrl_OpenUpto_Parse(name, value);
-  }
-
   // accessors -------------------------------------------------------
 
-  // .CShadesCtrl.OpenUpto state = 1;
+  // .OpenUpto state = 1;
   void clear_state();
   static const int kStateFieldNumber = 1;
-  ::CShadesCtrl_OpenUpto state() const;
-  void set_state(::CShadesCtrl_OpenUpto value);
+  ::OpenUpto state() const;
+  void set_state(::OpenUpto value);
 
   // int32 currentOpenPercentage = 2;
   void clear_currentopenpercentage();
@@ -624,20 +572,6 @@ class CHomeAutoParams : public ::google::protobuf::Message /* @@protoc_insertion
 
   // accessors -------------------------------------------------------
 
-  // string homeAddress = 1;
-  void clear_homeaddress();
-  static const int kHomeAddressFieldNumber = 1;
-  const ::std::string& homeaddress() const;
-  void set_homeaddress(const ::std::string& value);
-  #if LANG_CXX11
-  void set_homeaddress(::std::string&& value);
-  #endif
-  void set_homeaddress(const char* value);
-  void set_homeaddress(const char* value, size_t size);
-  ::std::string* mutable_homeaddress();
-  ::std::string* release_homeaddress();
-  void set_allocated_homeaddress(::std::string* homeaddress);
-
   // .CHeatingCtrl heating = 2;
   bool has_heating() const;
   void clear_heating();
@@ -686,7 +620,6 @@ class CHomeAutoParams : public ::google::protobuf::Message /* @@protoc_insertion
   inline void clear_has_action();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::internal::ArenaStringPtr homeaddress_;
   union ActionUnion {
     ActionUnion() {}
     ::CHeatingCtrl* heating_;
@@ -847,43 +780,43 @@ inline void CLightingCtrl::set_allocated_name(::std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:CLightingCtrl.name)
 }
 
-// .CLightingCtrl.LightOnOff livingRoom = 2;
+// .LightOnOff livingRoom = 2;
 inline void CLightingCtrl::clear_livingroom() {
   livingroom_ = 0;
 }
-inline ::CLightingCtrl_LightOnOff CLightingCtrl::livingroom() const {
+inline ::LightOnOff CLightingCtrl::livingroom() const {
   // @@protoc_insertion_point(field_get:CLightingCtrl.livingRoom)
-  return static_cast< ::CLightingCtrl_LightOnOff >(livingroom_);
+  return static_cast< ::LightOnOff >(livingroom_);
 }
-inline void CLightingCtrl::set_livingroom(::CLightingCtrl_LightOnOff value) {
+inline void CLightingCtrl::set_livingroom(::LightOnOff value) {
   
   livingroom_ = value;
   // @@protoc_insertion_point(field_set:CLightingCtrl.livingRoom)
 }
 
-// .CLightingCtrl.LightOnOff bedRoom = 3;
+// .LightOnOff bedRoom = 3;
 inline void CLightingCtrl::clear_bedroom() {
   bedroom_ = 0;
 }
-inline ::CLightingCtrl_LightOnOff CLightingCtrl::bedroom() const {
+inline ::LightOnOff CLightingCtrl::bedroom() const {
   // @@protoc_insertion_point(field_get:CLightingCtrl.bedRoom)
-  return static_cast< ::CLightingCtrl_LightOnOff >(bedroom_);
+  return static_cast< ::LightOnOff >(bedroom_);
 }
-inline void CLightingCtrl::set_bedroom(::CLightingCtrl_LightOnOff value) {
+inline void CLightingCtrl::set_bedroom(::LightOnOff value) {
   
   bedroom_ = value;
   // @@protoc_insertion_point(field_set:CLightingCtrl.bedRoom)
 }
 
-// .CLightingCtrl.LightOnOff kitchenRoom = 4;
+// .LightOnOff kitchenRoom = 4;
 inline void CLightingCtrl::clear_kitchenroom() {
   kitchenroom_ = 0;
 }
-inline ::CLightingCtrl_LightOnOff CLightingCtrl::kitchenroom() const {
+inline ::LightOnOff CLightingCtrl::kitchenroom() const {
   // @@protoc_insertion_point(field_get:CLightingCtrl.kitchenRoom)
-  return static_cast< ::CLightingCtrl_LightOnOff >(kitchenroom_);
+  return static_cast< ::LightOnOff >(kitchenroom_);
 }
-inline void CLightingCtrl::set_kitchenroom(::CLightingCtrl_LightOnOff value) {
+inline void CLightingCtrl::set_kitchenroom(::LightOnOff value) {
   
   kitchenroom_ = value;
   // @@protoc_insertion_point(field_set:CLightingCtrl.kitchenRoom)
@@ -893,15 +826,15 @@ inline void CLightingCtrl::set_kitchenroom(::CLightingCtrl_LightOnOff value) {
 
 // CShadesCtrl
 
-// .CShadesCtrl.OpenUpto state = 1;
+// .OpenUpto state = 1;
 inline void CShadesCtrl::clear_state() {
   state_ = 0;
 }
-inline ::CShadesCtrl_OpenUpto CShadesCtrl::state() const {
+inline ::OpenUpto CShadesCtrl::state() const {
   // @@protoc_insertion_point(field_get:CShadesCtrl.state)
-  return static_cast< ::CShadesCtrl_OpenUpto >(state_);
+  return static_cast< ::OpenUpto >(state_);
 }
-inline void CShadesCtrl::set_state(::CShadesCtrl_OpenUpto value) {
+inline void CShadesCtrl::set_state(::OpenUpto value) {
   
   state_ = value;
   // @@protoc_insertion_point(field_set:CShadesCtrl.state)
@@ -924,59 +857,6 @@ inline void CShadesCtrl::set_currentopenpercentage(::google::protobuf::int32 val
 // -------------------------------------------------------------------
 
 // CHomeAutoParams
-
-// string homeAddress = 1;
-inline void CHomeAutoParams::clear_homeaddress() {
-  homeaddress_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& CHomeAutoParams::homeaddress() const {
-  // @@protoc_insertion_point(field_get:CHomeAutoParams.homeAddress)
-  return homeaddress_.GetNoArena();
-}
-inline void CHomeAutoParams::set_homeaddress(const ::std::string& value) {
-  
-  homeaddress_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:CHomeAutoParams.homeAddress)
-}
-#if LANG_CXX11
-inline void CHomeAutoParams::set_homeaddress(::std::string&& value) {
-  
-  homeaddress_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:CHomeAutoParams.homeAddress)
-}
-#endif
-inline void CHomeAutoParams::set_homeaddress(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  
-  homeaddress_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:CHomeAutoParams.homeAddress)
-}
-inline void CHomeAutoParams::set_homeaddress(const char* value, size_t size) {
-  
-  homeaddress_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:CHomeAutoParams.homeAddress)
-}
-inline ::std::string* CHomeAutoParams::mutable_homeaddress() {
-  
-  // @@protoc_insertion_point(field_mutable:CHomeAutoParams.homeAddress)
-  return homeaddress_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline ::std::string* CHomeAutoParams::release_homeaddress() {
-  // @@protoc_insertion_point(field_release:CHomeAutoParams.homeAddress)
-  
-  return homeaddress_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline void CHomeAutoParams::set_allocated_homeaddress(::std::string* homeaddress) {
-  if (homeaddress != NULL) {
-    
-  } else {
-    
-  }
-  homeaddress_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), homeaddress);
-  // @@protoc_insertion_point(field_set_allocated:CHomeAutoParams.homeAddress)
-}
 
 // .CHeatingCtrl heating = 2;
 inline bool CHomeAutoParams::has_heating() const {
@@ -1135,15 +1015,15 @@ inline CHomeAutoParams::ActionCase CHomeAutoParams::action_case() const {
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::CLightingCtrl_LightOnOff> : ::std::true_type {};
+template <> struct is_proto_enum< ::LightOnOff> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::CLightingCtrl_LightOnOff>() {
-  return ::CLightingCtrl_LightOnOff_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::LightOnOff>() {
+  return ::LightOnOff_descriptor();
 }
-template <> struct is_proto_enum< ::CShadesCtrl_OpenUpto> : ::std::true_type {};
+template <> struct is_proto_enum< ::OpenUpto> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::CShadesCtrl_OpenUpto>() {
-  return ::CShadesCtrl_OpenUpto_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::OpenUpto>() {
+  return ::OpenUpto_descriptor();
 }
 
 }  // namespace protobuf

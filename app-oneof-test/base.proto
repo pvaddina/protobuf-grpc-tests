@@ -7,13 +7,20 @@ message CHeatingCtrl
   double desiredTemp = 3;
 }
 
+enum LightOnOff
+{
+  OFF = 0;
+  ON = 1;
+}
+
+enum OpenUpto
+{
+  CLOSE = 0;
+  OPEN = 1;
+}
+
 message CLightingCtrl
 {
-  enum LightOnOff
-  {
-    OFF = 0;
-    ON = 1;
-  }
   string name = 1;
   LightOnOff livingRoom = 2;
   LightOnOff bedRoom = 3;
@@ -22,22 +29,16 @@ message CLightingCtrl
 
 message CShadesCtrl
 {
-  enum OpenUpto
-  {
-    CLOSE = 0;
-    OPEN = 1;
-  }
   OpenUpto state = 1;
   int32 currentOpenPercentage = 2;
 }
 
 message CHomeAutoParams
 {
-  string homeAddress = 1;
   oneof action {
     CHeatingCtrl heating = 2;
     CLightingCtrl lighting = 3;
-    CShadesCtrl   shades = 4;
+    CShadesCtrl shades = 4;
   }
 }
 

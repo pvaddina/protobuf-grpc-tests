@@ -147,7 +147,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CHomeAutoParams, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CHomeAutoParams, homeaddress_),
   offsetof(::CHomeAutoParamsDefaultTypeInternal, heating_),
   offsetof(::CHomeAutoParamsDefaultTypeInternal, lighting_),
   offsetof(::CHomeAutoParamsDefaultTypeInternal, shades_),
@@ -190,22 +189,20 @@ void AddDescriptorsImpl() {
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\nbase.proto\"F\n\014CHeatingCtrl\022\014\n\004name\030\001 \001"
       "(\t\022\023\n\013currentTemp\030\002 \001(\001\022\023\n\013desiredTemp\030\003"
-      " \001(\001\"\307\001\n\rCLightingCtrl\022\014\n\004name\030\001 \001(\t\022-\n\n"
-      "livingRoom\030\002 \001(\0162\031.CLightingCtrl.LightOn"
-      "Off\022*\n\007bedRoom\030\003 \001(\0162\031.CLightingCtrl.Lig"
-      "htOnOff\022.\n\013kitchenRoom\030\004 \001(\0162\031.CLighting"
-      "Ctrl.LightOnOff\"\035\n\nLightOnOff\022\007\n\003OFF\020\000\022\006"
-      "\n\002ON\020\001\"s\n\013CShadesCtrl\022$\n\005state\030\001 \001(\0162\025.C"
-      "ShadesCtrl.OpenUpto\022\035\n\025currentOpenPercen"
-      "tage\030\002 \001(\005\"\037\n\010OpenUpto\022\t\n\005CLOSE\020\000\022\010\n\004OPE"
-      "N\020\001\"\226\001\n\017CHomeAutoParams\022\023\n\013homeAddress\030\001"
-      " \001(\t\022 \n\007heating\030\002 \001(\0132\r.CHeatingCtrlH\000\022\""
-      "\n\010lighting\030\003 \001(\0132\016.CLightingCtrlH\000\022\036\n\006sh"
-      "ades\030\004 \001(\0132\014.CShadesCtrlH\000B\010\n\006actionb\006pr"
-      "oto3"
+      " \001(\001\"~\n\rCLightingCtrl\022\014\n\004name\030\001 \001(\t\022\037\n\nl"
+      "ivingRoom\030\002 \001(\0162\013.LightOnOff\022\034\n\007bedRoom\030"
+      "\003 \001(\0162\013.LightOnOff\022 \n\013kitchenRoom\030\004 \001(\0162"
+      "\013.LightOnOff\"F\n\013CShadesCtrl\022\030\n\005state\030\001 \001"
+      "(\0162\t.OpenUpto\022\035\n\025currentOpenPercentage\030\002"
+      " \001(\005\"\201\001\n\017CHomeAutoParams\022 \n\007heating\030\002 \001("
+      "\0132\r.CHeatingCtrlH\000\022\"\n\010lighting\030\003 \001(\0132\016.C"
+      "LightingCtrlH\000\022\036\n\006shades\030\004 \001(\0132\014.CShades"
+      "CtrlH\000B\010\n\006action*\035\n\nLightOnOff\022\007\n\003OFF\020\000\022"
+      "\006\n\002ON\020\001*\037\n\010OpenUpto\022\t\n\005CLOSE\020\000\022\010\n\004OPEN\020\001"
+      "b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 564);
+      descriptor, 488);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base.proto", &protobuf_RegisterTypes);
 }
@@ -221,11 +218,11 @@ struct StaticDescriptorInitializer {
   }
 } static_descriptor_initializer;
 }  // namespace protobuf_base_2eproto
-const ::google::protobuf::EnumDescriptor* CLightingCtrl_LightOnOff_descriptor() {
+const ::google::protobuf::EnumDescriptor* LightOnOff_descriptor() {
   protobuf_base_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_base_2eproto::file_level_enum_descriptors[0];
 }
-bool CLightingCtrl_LightOnOff_IsValid(int value) {
+bool LightOnOff_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -235,18 +232,11 @@ bool CLightingCtrl_LightOnOff_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const CLightingCtrl_LightOnOff CLightingCtrl::OFF;
-const CLightingCtrl_LightOnOff CLightingCtrl::ON;
-const CLightingCtrl_LightOnOff CLightingCtrl::LightOnOff_MIN;
-const CLightingCtrl_LightOnOff CLightingCtrl::LightOnOff_MAX;
-const int CLightingCtrl::LightOnOff_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-const ::google::protobuf::EnumDescriptor* CShadesCtrl_OpenUpto_descriptor() {
+const ::google::protobuf::EnumDescriptor* OpenUpto_descriptor() {
   protobuf_base_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_base_2eproto::file_level_enum_descriptors[1];
 }
-bool CShadesCtrl_OpenUpto_IsValid(int value) {
+bool OpenUpto_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
@@ -256,13 +246,6 @@ bool CShadesCtrl_OpenUpto_IsValid(int value) {
   }
 }
 
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const CShadesCtrl_OpenUpto CShadesCtrl::CLOSE;
-const CShadesCtrl_OpenUpto CShadesCtrl::OPEN;
-const CShadesCtrl_OpenUpto CShadesCtrl::OpenUpto_MIN;
-const CShadesCtrl_OpenUpto CShadesCtrl::OpenUpto_MAX;
-const int CShadesCtrl::OpenUpto_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 // ===================================================================
 
@@ -684,7 +667,7 @@ bool CLightingCtrl::MergePartialFromCodedStream(
         break;
       }
 
-      // .CLightingCtrl.LightOnOff livingRoom = 2;
+      // .LightOnOff livingRoom = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
@@ -692,14 +675,14 @@ bool CLightingCtrl::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_livingroom(static_cast< ::CLightingCtrl_LightOnOff >(value));
+          set_livingroom(static_cast< ::LightOnOff >(value));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .CLightingCtrl.LightOnOff bedRoom = 3;
+      // .LightOnOff bedRoom = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
@@ -707,14 +690,14 @@ bool CLightingCtrl::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_bedroom(static_cast< ::CLightingCtrl_LightOnOff >(value));
+          set_bedroom(static_cast< ::LightOnOff >(value));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .CLightingCtrl.LightOnOff kitchenRoom = 4;
+      // .LightOnOff kitchenRoom = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
@@ -722,7 +705,7 @@ bool CLightingCtrl::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_kitchenroom(static_cast< ::CLightingCtrl_LightOnOff >(value));
+          set_kitchenroom(static_cast< ::LightOnOff >(value));
         } else {
           goto handle_unusual;
         }
@@ -765,19 +748,19 @@ void CLightingCtrl::SerializeWithCachedSizes(
       1, this->name(), output);
   }
 
-  // .CLightingCtrl.LightOnOff livingRoom = 2;
+  // .LightOnOff livingRoom = 2;
   if (this->livingroom() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       2, this->livingroom(), output);
   }
 
-  // .CLightingCtrl.LightOnOff bedRoom = 3;
+  // .LightOnOff bedRoom = 3;
   if (this->bedroom() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       3, this->bedroom(), output);
   }
 
-  // .CLightingCtrl.LightOnOff kitchenRoom = 4;
+  // .LightOnOff kitchenRoom = 4;
   if (this->kitchenroom() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       4, this->kitchenroom(), output);
@@ -808,19 +791,19 @@ void CLightingCtrl::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // .CLightingCtrl.LightOnOff livingRoom = 2;
+  // .LightOnOff livingRoom = 2;
   if (this->livingroom() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       2, this->livingroom(), target);
   }
 
-  // .CLightingCtrl.LightOnOff bedRoom = 3;
+  // .LightOnOff bedRoom = 3;
   if (this->bedroom() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       3, this->bedroom(), target);
   }
 
-  // .CLightingCtrl.LightOnOff kitchenRoom = 4;
+  // .LightOnOff kitchenRoom = 4;
   if (this->kitchenroom() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       4, this->kitchenroom(), target);
@@ -850,19 +833,19 @@ size_t CLightingCtrl::ByteSizeLong() const {
         this->name());
   }
 
-  // .CLightingCtrl.LightOnOff livingRoom = 2;
+  // .LightOnOff livingRoom = 2;
   if (this->livingroom() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->livingroom());
   }
 
-  // .CLightingCtrl.LightOnOff bedRoom = 3;
+  // .LightOnOff bedRoom = 3;
   if (this->bedroom() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->bedroom());
   }
 
-  // .CLightingCtrl.LightOnOff kitchenRoom = 4;
+  // .LightOnOff kitchenRoom = 4;
   if (this->kitchenroom() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->kitchenroom());
@@ -1024,7 +1007,7 @@ bool CShadesCtrl::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .CShadesCtrl.OpenUpto state = 1;
+      // .OpenUpto state = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
@@ -1032,7 +1015,7 @@ bool CShadesCtrl::MergePartialFromCodedStream(
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
-          set_state(static_cast< ::CShadesCtrl_OpenUpto >(value));
+          set_state(static_cast< ::OpenUpto >(value));
         } else {
           goto handle_unusual;
         }
@@ -1079,7 +1062,7 @@ void CShadesCtrl::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CShadesCtrl.OpenUpto state = 1;
+  // .OpenUpto state = 1;
   if (this->state() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteEnum(
       1, this->state(), output);
@@ -1104,7 +1087,7 @@ void CShadesCtrl::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .CShadesCtrl.OpenUpto state = 1;
+  // .OpenUpto state = 1;
   if (this->state() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
       1, this->state(), target);
@@ -1132,7 +1115,7 @@ size_t CShadesCtrl::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .CShadesCtrl.OpenUpto state = 1;
+  // .OpenUpto state = 1;
   if (this->state() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::EnumSize(this->state());
@@ -1268,7 +1251,6 @@ void CHomeAutoParams::set_allocated_shades(::CShadesCtrl* shades) {
   // @@protoc_insertion_point(field_set_allocated:CHomeAutoParams.shades)
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CHomeAutoParams::kHomeAddressFieldNumber;
 const int CHomeAutoParams::kHeatingFieldNumber;
 const int CHomeAutoParams::kLightingFieldNumber;
 const int CHomeAutoParams::kShadesFieldNumber;
@@ -1285,10 +1267,6 @@ CHomeAutoParams::CHomeAutoParams(const CHomeAutoParams& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  homeaddress_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.homeaddress().size() > 0) {
-    homeaddress_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.homeaddress_);
-  }
   clear_has_action();
   switch (from.action_case()) {
     case kHeating: {
@@ -1311,7 +1289,6 @@ CHomeAutoParams::CHomeAutoParams(const CHomeAutoParams& from)
 }
 
 void CHomeAutoParams::SharedCtor() {
-  homeaddress_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   clear_has_action();
 }
 
@@ -1321,7 +1298,6 @@ CHomeAutoParams::~CHomeAutoParams() {
 }
 
 void CHomeAutoParams::SharedDtor() {
-  homeaddress_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (has_action()) {
     clear_action();
   }
@@ -1370,7 +1346,6 @@ void CHomeAutoParams::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  homeaddress_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   clear_action();
   _internal_metadata_.Clear();
 }
@@ -1385,22 +1360,6 @@ bool CHomeAutoParams::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // string homeAddress = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_homeaddress()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->homeaddress().data(), static_cast<int>(this->homeaddress().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "CHomeAutoParams.homeAddress"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
       // .CHeatingCtrl heating = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
@@ -1463,16 +1422,6 @@ void CHomeAutoParams::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string homeAddress = 1;
-  if (this->homeaddress().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->homeaddress().data(), static_cast<int>(this->homeaddress().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CHomeAutoParams.homeAddress");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->homeaddress(), output);
-  }
-
   // .CHeatingCtrl heating = 2;
   if (has_heating()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
@@ -1504,17 +1453,6 @@ void CHomeAutoParams::SerializeWithCachedSizes(
   // @@protoc_insertion_point(serialize_to_array_start:CHomeAutoParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
-
-  // string homeAddress = 1;
-  if (this->homeaddress().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->homeaddress().data(), static_cast<int>(this->homeaddress().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "CHomeAutoParams.homeAddress");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->homeaddress(), target);
-  }
 
   // .CHeatingCtrl heating = 2;
   if (has_heating()) {
@@ -1554,13 +1492,6 @@ size_t CHomeAutoParams::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // string homeAddress = 1;
-  if (this->homeaddress().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->homeaddress());
-  }
-
   switch (action_case()) {
     // .CHeatingCtrl heating = 2;
     case kHeating: {
@@ -1614,10 +1545,6 @@ void CHomeAutoParams::MergeFrom(const CHomeAutoParams& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.homeaddress().size() > 0) {
-
-    homeaddress_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.homeaddress_);
-  }
   switch (from.action_case()) {
     case kHeating: {
       mutable_heating()->::CHeatingCtrl::MergeFrom(from.heating());
@@ -1661,8 +1588,6 @@ void CHomeAutoParams::Swap(CHomeAutoParams* other) {
 }
 void CHomeAutoParams::InternalSwap(CHomeAutoParams* other) {
   using std::swap;
-  homeaddress_.Swap(&other->homeaddress_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
   swap(action_, other->action_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
