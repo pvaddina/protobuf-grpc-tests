@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "base.pb.h"
 #include "dht.pb.h"
+#include "base.pb.h"
 
 void BaseReader(const Base::BaseMsg& m)
 {
@@ -11,8 +11,8 @@ void BaseReader(const Base::BaseMsg& m)
 
 CDhtConfigCnf DhtReader(const CDhtConfigReq& m)
 {
-  std::cout << "ID=" << m.baseid.id() << std::endl;
-  std::cout << "Name=" << m.baseid.name() << std::endl;
+  std::cout << "ID=" << m.baseid().id() << std::endl;
+  std::cout << "Name=" << m.baseid().name() << std::endl;
   std::cout << "State=" << m.state() << std::endl;
   CDhtConfigCnf c;
   c.set_result(Result::SUCCESS);
@@ -22,6 +22,7 @@ CDhtConfigCnf DhtReader(const CDhtConfigReq& m)
 
 void BaseTester()
 {
+  std::cout << "In BaseTester ..." << std::endl;
   Base::BaseMsg m;
   m.set_name("This is a base msg");
   BaseReader(m);
@@ -29,9 +30,10 @@ void BaseTester()
 
 void DhtTester()
 {
+  std::cout << "In DhtTester ..." << std::endl;
   CDhtConfigReq r;
-  r.baseid.set_name("CDhtConfigReq");
-  r.baseid.set_id(437);
+  r.mutable_baseid()->set_name("CDhtConfigReq");
+  r.mutable_baseid()->set_id(437);
   r.set_state(OnOff::ON);
   CDhtConfigCnf c = DhtReader(r);
   std::cout << "Result: " << c.result() << ", state=" << c.state() << std::endl;
@@ -40,6 +42,9 @@ void DhtTester()
 int main()
 {
   BaseTester();
+  std::cout << "\n\n";
+
+  DhtTester();
   return 0;
 }
 
