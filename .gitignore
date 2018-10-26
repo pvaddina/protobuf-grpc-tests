@@ -5,6 +5,7 @@
 *.obj
 *.ORIG
 *.orig
+*.bak
 
 build/
 vs/
