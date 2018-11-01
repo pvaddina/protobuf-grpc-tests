@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+message BaseMsg
+{
+  string name = 1;
+  int32 id = 2;
+}
+
+enum OnOff
+{
+  INVALID = 0;
+  ON = 1;
+  OFF = 2;
+  ON_BUT_NOT_WORKING = 3;
+}
+
+enum Result
+{
+  SUCCESS = 0;
+  ERROR = 1;
+}
+
+message CDhtConfigReq
+{
+  BaseMsg baseId = 1;
+  OnOff state = 2;
+}
+
+message CDhtConfigCnf
+{
+  Result result = 1;
+  OnOff state = 2;
+}
+
+service DhtConfigHandler {
+  rpc Config(CDhtConfigReq) returns (CDhtConfigCnf) {}
+}
+
+
+
+
