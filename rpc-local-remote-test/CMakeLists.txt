@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
-project(dummy-interface-with-static-target)
+project(simple-grpc-example)
 
 
 function(list_print liItems)
@@ -36,7 +36,7 @@ if (NOT Protobuf_FOUND)
 endif()
 
 set(PROTO_SRCS dht.proto)
-
+set(APP_SOURCES test.cpp)
 
 foreach(pfile ${PROTO_SRCS}) 
   string(REPLACE ".proto" ".pb" fname ${pfile})
@@ -87,6 +87,6 @@ add_custom_command(OUTPUT ${PROTO_GRPC_SRCS_PATH}
 add_custom_target(dummy_target ALL DEPENDS ${PROTO_CPP_SRCS_PATH} ${PROTO_GRPC_SRCS_PATH})
 
 add_executable(testApp test.cpp ${PROTO_CPP_SRCS_PATH})
-target_link_libraries(testApp ${Protobuf_LIBRARIES}/libprotobuf.lib)
+target_link_libraries(testApp ${Protobuf_LIBRARIES}/libprotobuf.lib )
 
 

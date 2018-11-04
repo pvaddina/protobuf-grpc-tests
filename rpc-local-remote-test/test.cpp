@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include "dht.pb.h"
 
 void BaseReader(const BaseMsg& m)
