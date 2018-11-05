@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 project(dummy-interface-with-static-target)
 
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
+include("../cmake_include/common.txt")
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
