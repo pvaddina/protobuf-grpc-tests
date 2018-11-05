@@ -1,34 +1,7 @@
 cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 project(simple-grpc-example)
 
-
-function(list_print liItems)
-    message(STATUS "#############################################")
-  foreach(f ${${liItems}})
-    message(STATUS ${f})
-  endforeach()
-    message(STATUS "#############################################/n")
-endfunction()
-
-
-function(concat_path iL oL cVal) 
-  foreach(pfile ${${iL}})
-    string(CONCAT l ${${cVal}} ${pfile})
-    #message(STATUS ${pfile} " ################################### " ${l})
-    set(p ${p} ${l})
-  endforeach()
-  set(${oL} ${p} PARENT_SCOPE)
-endfunction()
-
-
-set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
-set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
-set(Protobuf_GRPC_PLUGIN_EXECUTABLE "C:/Users/praka/workspace/third_party/grpc/.build/Release/grpc_cpp_plugin.exe")
-set(Protobuf_USE_STATIC_LIBS ON)
-
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+include("../cmake_include/common.txt")
 
 find_package(Protobuf REQUIRED)
 if (NOT Protobuf_FOUND)
@@ -58,9 +31,7 @@ string(CONCAT gen_path_prefix ${CMAKE_CURRENT_SOURCE_DIR} "/gen/")
 concat_path(PROTO_SRCS PROTO_SRCS_PATH path_prefix)
 concat_path(PROTO_CPP_SRCS PROTO_CPP_SRCS_PATH gen_path_prefix)
 concat_path(PROTO_GRPC_SRCS PROTO_GRPC_SRCS_PATH gen_path_prefix)
-list_print(PROTO_SRCS_PATH)
 list_print(PROTO_CPP_SRCS_PATH)
-list_print(PROTO_GRPC_SRCS_PATH)
 
 
 set (GEN_DEST_DIR ${CMAKE_CURRENT_SOURCE_DIR}/gen)

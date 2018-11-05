@@ -6,34 +6,26 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
 
-namespace protobuf_base_2eproto {
-extern PROTOBUF_INTERNAL_EXPORT_protobuf_base_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BaseMsg;
-}  // namespace protobuf_base_2eproto
+extern PROTOBUF_INTERNAL_EXPORT_base_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BaseMsg_base_2eproto;
 class CDhtConfigReqDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CDhtConfigReq>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<CDhtConfigReq> _instance;
 } _CDhtConfigReq_default_instance_;
 class CDhtConfigCnfDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CDhtConfigCnf>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<CDhtConfigCnf> _instance;
 } _CDhtConfigCnf_default_instance_;
-namespace protobuf_dht_2eproto {
-static void InitDefaultsCDhtConfigReq() {
+static void InitDefaultsCDhtConfigReq_dht_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -44,11 +36,11 @@ static void InitDefaultsCDhtConfigReq() {
   ::CDhtConfigReq::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_CDhtConfigReq =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCDhtConfigReq}, {
-      &protobuf_base_2eproto::scc_info_BaseMsg.base,}};
+::google::protobuf::internal::SCCInfo<1> scc_info_CDhtConfigReq_dht_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCDhtConfigReq_dht_2eproto}, {
+      &scc_info_BaseMsg_base_2eproto.base,}};
 
-static void InitDefaultsCDhtConfigCnf() {
+static void InitDefaultsCDhtConfigCnf_dht_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -59,34 +51,35 @@ static void InitDefaultsCDhtConfigCnf() {
   ::CDhtConfigCnf::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_CDhtConfigCnf =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCDhtConfigCnf}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_CDhtConfigCnf_dht_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsCDhtConfigCnf_dht_2eproto}, {}};
 
-void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_CDhtConfigReq.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CDhtConfigCnf.base);
+void InitDefaults_dht_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_CDhtConfigReq_dht_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_CDhtConfigCnf_dht_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[2];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
+::google::protobuf::Metadata file_level_metadata_dht_2eproto[2];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_dht_2eproto[2];
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_dht_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_dht_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigReq, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigReq, baseid_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigReq, state_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigReq, baseid_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigReq, state_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigCnf, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigCnf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigCnf, result_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::CDhtConfigCnf, state_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigCnf, result_),
+  PROTOBUF_FIELD_OFFSET(::CDhtConfigCnf, state_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::CDhtConfigReq)},
   { 7, -1, sizeof(::CDhtConfigCnf)},
 };
@@ -96,56 +89,38 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::_CDhtConfigCnf_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  AssignDescriptors(
-      "dht.proto", schemas, file_default_instances, TableStruct::offsets,
-      file_level_metadata, file_level_enum_descriptors, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_dht_2eproto = {
+  {}, AddDescriptors_dht_2eproto, "dht.proto", schemas,
+  file_default_instances, TableStruct_dht_2eproto::offsets,
+  file_level_metadata_dht_2eproto, 2, file_level_enum_descriptors_dht_2eproto, file_level_service_descriptors_dht_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
-}
+::google::protobuf::internal::DescriptorTable descriptor_table_dht_2eproto = {
+  false, InitDefaults_dht_2eproto, 
+  "\n\tdht.proto\032\nbase.proto\"E\n\rCDhtConfigReq"
+  "\022\035\n\006baseId\030\001 \001(\0132\r.Base.BaseMsg\022\025\n\005state"
+  "\030\002 \001(\0162\006.OnOff\"\?\n\rCDhtConfigCnf\022\027\n\006resul"
+  "t\030\001 \001(\0162\007.Result\022\025\n\005state\030\002 \001(\0162\006.OnOff*"
+  "=\n\005OnOff\022\013\n\007INVALID\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002\022\026"
+  "\n\022ON_BUT_NOT_WORKING\020\003* \n\006Result\022\013\n\007SUCC"
+  "ESS\020\000\022\t\n\005ERROR\020\001b\006proto3"
+,
+  "dht.proto", &assign_descriptors_table_dht_2eproto, 264,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\tdht.proto\032\nbase.proto\"E\n\rCDhtConfigReq"
-      "\022\035\n\006baseId\030\001 \001(\0132\r.Base.BaseMsg\022\025\n\005state"
-      "\030\002 \001(\0162\006.OnOff\"\?\n\rCDhtConfigCnf\022\027\n\006resul"
-      "t\030\001 \001(\0162\007.Result\022\025\n\005state\030\002 \001(\0162\006.OnOff*"
-      "=\n\005OnOff\022\013\n\007INVALID\020\000\022\006\n\002ON\020\001\022\007\n\003OFF\020\002\022\026"
-      "\n\022ON_BUT_NOT_WORKING\020\003* \n\006Result\022\013\n\007SUCC"
-      "ESS\020\000\022\t\n\005ERROR\020\001b\006proto3"
+void AddDescriptors_dht_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  {
+    ::AddDescriptors_base_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 264);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "dht.proto", &protobuf_RegisterTypes);
-  ::protobuf_base_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_dht_2eproto, deps, 1);
 }
 
-void AddDescriptors() {
-  static ::google::protobuf::internal::once_flag once;
-  ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_dht_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_dht_2eproto = []() { AddDescriptors_dht_2eproto(); return true; }();
 const ::google::protobuf::EnumDescriptor* OnOff_descriptor() {
-  protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dht_2eproto::file_level_enum_descriptors[0];
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_dht_2eproto);
+  return file_level_enum_descriptors_dht_2eproto[0];
 }
 bool OnOff_IsValid(int value) {
   switch (value) {
@@ -160,8 +135,8 @@ bool OnOff_IsValid(int value) {
 }
 
 const ::google::protobuf::EnumDescriptor* Result_descriptor() {
-  protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_dht_2eproto::file_level_enum_descriptors[1];
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_dht_2eproto);
+  return file_level_enum_descriptors_dht_2eproto[1];
 }
 bool Result_IsValid(int value) {
   switch (value) {
@@ -180,6 +155,15 @@ void CDhtConfigReq::InitAsDefaultInstance() {
   ::_CDhtConfigReq_default_instance_._instance.get_mutable()->baseid_ = const_cast< ::Base::BaseMsg*>(
       ::Base::BaseMsg::internal_default_instance());
 }
+class CDhtConfigReq::HasBitSetters {
+ public:
+  static const ::Base::BaseMsg& baseid(const CDhtConfigReq* msg);
+};
+
+const ::Base::BaseMsg&
+CDhtConfigReq::HasBitSetters::baseid(const CDhtConfigReq* msg) {
+  return *msg->baseid_;
+}
 void CDhtConfigReq::clear_baseid() {
   if (GetArenaNoVirtual() == NULL && baseid_ != NULL) {
     delete baseid_;
@@ -193,8 +177,6 @@ const int CDhtConfigReq::kStateFieldNumber;
 
 CDhtConfigReq::CDhtConfigReq()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_dht_2eproto::scc_info_CDhtConfigReq.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:CDhtConfigReq)
 }
@@ -212,6 +194,8 @@ CDhtConfigReq::CDhtConfigReq(const CDhtConfigReq& from)
 }
 
 void CDhtConfigReq::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_CDhtConfigReq_dht_2eproto.base);
   ::memset(&baseid_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&state_) -
       reinterpret_cast<char*>(&baseid_)) + sizeof(state_));
@@ -229,13 +213,8 @@ void CDhtConfigReq::SharedDtor() {
 void CDhtConfigReq::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* CDhtConfigReq::descriptor() {
-  ::protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_dht_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const CDhtConfigReq& CDhtConfigReq::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_dht_2eproto::scc_info_CDhtConfigReq.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_CDhtConfigReq_dht_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -254,9 +233,71 @@ void CDhtConfigReq::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* CDhtConfigReq::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<CDhtConfigReq*>(object);
+  ::google::protobuf::uint32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ::google::protobuf::uint32 tag;
+    ptr = Varint::Parse32Inline(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .Base.BaseMsg baseId = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = Varint::Parse32Inline(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::Base::BaseMsg::_InternalParse;
+        object = msg->mutable_baseid();
+        if (size > end - ptr) goto len_delim_till_end;
+        auto newend = ptr + size;
+        bool ok = ctx->ParseExactRange({parser_till_end, object},
+                                       ptr, newend);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+        ptr = newend;
+        break;
+      }
+      // .OnOff state = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::OnOff value = static_cast<::OnOff>(val);
+        msg->set_state(value);
+        break;
+      }
+      default: {
+      handle_unusual: (void)&&handle_unusual;
+        if ((tag & 7) == 4 || tag == 0) {
+          bool ok = ctx->ValidEndGroup(tag);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end: (void)&&len_delim_till_end;
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                                 {parser_till_end, object}, size);
+group_continues: (void)&&group_continues;
+  GOOGLE_DCHECK(ptr >= end);
+  ctx->StoreGroup({_InternalParse, msg}, {parser_till_end, object}, depth);
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CDhtConfigReq::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:CDhtConfigReq)
   for (;;) {
@@ -266,8 +307,7 @@ bool CDhtConfigReq::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .Base.BaseMsg baseId = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_baseid()));
         } else {
@@ -278,9 +318,8 @@ bool CDhtConfigReq::MergePartialFromCodedStream(
 
       // .OnOff state = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+          int value = 0;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -310,6 +349,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CDhtConfigReq::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -320,7 +360,7 @@ void CDhtConfigReq::SerializeWithCachedSizes(
   // .Base.BaseMsg baseId = 1;
   if (this->has_baseid()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->_internal_baseid(), output);
+      1, HasBitSetters::baseid(this), output);
   }
 
   // .OnOff state = 2;
@@ -329,9 +369,9 @@ void CDhtConfigReq::SerializeWithCachedSizes(
       2, this->state(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:CDhtConfigReq)
 }
@@ -347,7 +387,7 @@ void CDhtConfigReq::SerializeWithCachedSizes(
   if (this->has_baseid()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, this->_internal_baseid(), deterministic, target);
+        1, HasBitSetters::baseid(this), deterministic, target);
   }
 
   // .OnOff state = 2;
@@ -356,9 +396,9 @@ void CDhtConfigReq::SerializeWithCachedSizes(
       2, this->state(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CDhtConfigReq)
   return target;
@@ -368,11 +408,15 @@ size_t CDhtConfigReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CDhtConfigReq)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .Base.BaseMsg baseId = 1;
   if (this->has_baseid()) {
     total_size += 1 +
@@ -395,7 +439,7 @@ void CDhtConfigReq::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:CDhtConfigReq)
   GOOGLE_DCHECK_NE(&from, this);
   const CDhtConfigReq* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CDhtConfigReq>(
+      ::google::protobuf::DynamicCastToGenerated<CDhtConfigReq>(
           &from);
   if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:CDhtConfigReq)
@@ -445,14 +489,14 @@ void CDhtConfigReq::Swap(CDhtConfigReq* other) {
 }
 void CDhtConfigReq::InternalSwap(CDhtConfigReq* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(baseid_, other->baseid_);
   swap(state_, other->state_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata CDhtConfigReq::GetMetadata() const {
-  protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_dht_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_dht_2eproto);
+  return ::file_level_metadata_dht_2eproto[kIndexInFileMessages];
 }
 
 
@@ -460,6 +504,10 @@ void CDhtConfigReq::InternalSwap(CDhtConfigReq* other) {
 
 void CDhtConfigCnf::InitAsDefaultInstance() {
 }
+class CDhtConfigCnf::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CDhtConfigCnf::kResultFieldNumber;
 const int CDhtConfigCnf::kStateFieldNumber;
@@ -467,8 +515,6 @@ const int CDhtConfigCnf::kStateFieldNumber;
 
 CDhtConfigCnf::CDhtConfigCnf()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  ::google::protobuf::internal::InitSCC(
-      &protobuf_dht_2eproto::scc_info_CDhtConfigCnf.base);
   SharedCtor();
   // @@protoc_insertion_point(constructor:CDhtConfigCnf)
 }
@@ -499,13 +545,8 @@ void CDhtConfigCnf::SharedDtor() {
 void CDhtConfigCnf::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* CDhtConfigCnf::descriptor() {
-  ::protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_dht_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const CDhtConfigCnf& CDhtConfigCnf::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_dht_2eproto::scc_info_CDhtConfigCnf.base);
+  ::google::protobuf::internal::InitSCC(&::scc_info_CDhtConfigCnf_dht_2eproto.base);
   return *internal_default_instance();
 }
 
@@ -522,9 +563,66 @@ void CDhtConfigCnf::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* CDhtConfigCnf::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<CDhtConfigCnf*>(object);
+  ::google::protobuf::uint32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ::google::protobuf::uint32 tag;
+    ptr = Varint::Parse32Inline(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .Result result = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::Result value = static_cast<::Result>(val);
+        msg->set_result(value);
+        break;
+      }
+      // .OnOff state = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        ::google::protobuf::uint64 val;
+        ptr = Varint::Parse64(ptr, &val);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ::OnOff value = static_cast<::OnOff>(val);
+        msg->set_state(value);
+        break;
+      }
+      default: {
+      handle_unusual: (void)&&handle_unusual;
+        if ((tag & 7) == 4 || tag == 0) {
+          bool ok = ctx->ValidEndGroup(tag);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ok);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end: (void)&&len_delim_till_end;
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                                 {parser_till_end, object}, size);
+group_continues: (void)&&group_continues;
+  GOOGLE_DCHECK(ptr >= end);
+  ctx->StoreGroup({_InternalParse, msg}, {parser_till_end, object}, depth);
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CDhtConfigCnf::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:CDhtConfigCnf)
   for (;;) {
@@ -534,9 +632,8 @@ bool CDhtConfigCnf::MergePartialFromCodedStream(
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .Result result = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
+          int value = 0;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -549,9 +646,8 @@ bool CDhtConfigCnf::MergePartialFromCodedStream(
 
       // .OnOff state = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+          int value = 0;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -581,6 +677,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CDhtConfigCnf::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -600,9 +697,9 @@ void CDhtConfigCnf::SerializeWithCachedSizes(
       2, this->state(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:CDhtConfigCnf)
 }
@@ -626,9 +723,9 @@ void CDhtConfigCnf::SerializeWithCachedSizes(
       2, this->state(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CDhtConfigCnf)
   return target;
@@ -638,11 +735,15 @@ size_t CDhtConfigCnf::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CDhtConfigCnf)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .Result result = 1;
   if (this->result() != 0) {
     total_size += 1 +
@@ -664,7 +765,7 @@ void CDhtConfigCnf::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:CDhtConfigCnf)
   GOOGLE_DCHECK_NE(&from, this);
   const CDhtConfigCnf* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const CDhtConfigCnf>(
+      ::google::protobuf::DynamicCastToGenerated<CDhtConfigCnf>(
           &from);
   if (source == NULL) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:CDhtConfigCnf)
@@ -714,27 +815,28 @@ void CDhtConfigCnf::Swap(CDhtConfigCnf* other) {
 }
 void CDhtConfigCnf::InternalSwap(CDhtConfigCnf* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(result_, other->result_);
   swap(state_, other->state_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
 ::google::protobuf::Metadata CDhtConfigCnf::GetMetadata() const {
-  protobuf_dht_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_dht_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_dht_2eproto);
+  return ::file_level_metadata_dht_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CDhtConfigReq* Arena::CreateMaybeMessage< ::CDhtConfigReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::CDhtConfigReq* Arena::CreateMaybeMessage< ::CDhtConfigReq >(Arena* arena) {
   return Arena::CreateInternal< ::CDhtConfigReq >(arena);
 }
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::CDhtConfigCnf* Arena::CreateMaybeMessage< ::CDhtConfigCnf >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::CDhtConfigCnf* Arena::CreateMaybeMessage< ::CDhtConfigCnf >(Arena* arena) {
   return Arena::CreateInternal< ::CDhtConfigCnf >(arena);
 }
 }  // namespace protobuf
 }  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>
