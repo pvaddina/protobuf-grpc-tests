@@ -21,9 +21,9 @@ function(concat_path iL oL cVal)
 endfunction()
 
 
-set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
-set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
+set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third-party/protobuf/install/Release/lib")
+set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third-party/protobuf/install/Release/include")
+set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third-party/protobuf/install/Release/bin/protoc.exe")
 set(Protobuf_USE_STATIC_LIBS ON)
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
