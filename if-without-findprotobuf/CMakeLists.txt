@@ -3,8 +3,17 @@ project(dummy-interface-with-static-target)
 
 include("../cmake_include/common.txt")
 
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+# Windows-specific compiler flags - commented out for Linux
+# set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+# set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+
+# Find protoc executable if not already set
+if(NOT Protobuf_PROTOC_EXECUTABLE)
+  find_program(Protobuf_PROTOC_EXECUTABLE protoc)
+  if(NOT Protobuf_PROTOC_EXECUTABLE)
+    message(FATAL_ERROR "protoc executable not found")
+  endif()
+endif()
 
 set(PROTO_SUORCES 
   ${CMAKE_CURRENT_SOURCE_DIR}/base.proto 

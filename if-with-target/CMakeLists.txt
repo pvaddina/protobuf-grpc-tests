@@ -32,8 +32,8 @@ message("Protobuf_PROTOC_EXECUTABLE=${PROTOBUF_PROTOC_EXECUTABLE}")
 if (BUILD_STATIC_LIBRARY_ONLY)
   add_library(if STATIC ${PROTO_SRCS} ${PROTO_HDRS})
 else()
-  add_executable(testApp test.cpp ${PROTO_SRCS} ${PROTO_HDRS})
-  target_link_libraries(testApp ${Protobuf_LIBRARIES}/libprotobuf.lib)
+  add_executable(if-with-target-testApp test.cpp ${PROTO_SRCS} ${PROTO_HDRS})
+  target_link_libraries(if-with-target-testApp ${Protobuf_LIBRARIES})
 endif()
 
 

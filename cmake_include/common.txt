@@ -29,12 +29,14 @@ function(get_cpp_srcs src dst)
 endfunction()
 
 
-set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
-set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
-set(Protobuf_GRPC_PLUGIN_EXECUTABLE "C:/Users/praka/workspace/third_party/grpc/.build/Release/grpc_cpp_plugin.exe")
-set(Protobuf_USE_STATIC_LIBS ON)
+# Remove Windows-specific hardcoded paths - let CMake find Protobuf automatically
+# set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third_party/protobuf/install/Release/lib")
+# set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third_party/protobuf/install/Release/include")
+# set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third_party/protobuf/install/Release/bin/protoc.exe")
+# set(Protobuf_GRPC_PLUGIN_EXECUTABLE "C:/Users/praka/workspace/third_party/grpc/.build/Release/grpc_cpp_plugin.exe")
+# set(Protobuf_USE_STATIC_LIBS ON)
 
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+# Windows-specific compiler flags - commented out for Linux
+# set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+# set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 

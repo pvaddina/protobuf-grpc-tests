@@ -21,13 +21,15 @@ function(concat_path iL oL cVal)
 endfunction()
 
 
-set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third-party/protobuf/install/Release/lib")
-set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third-party/protobuf/install/Release/include")
-set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third-party/protobuf/install/Release/bin/protoc.exe")
-set(Protobuf_USE_STATIC_LIBS ON)
+# Remove Windows-specific hardcoded paths - let CMake find Protobuf automatically
+# set(Protobuf_LIBRARIES "C:/Users/praka/workspace/third-party/protobuf/install/Release/lib")
+# set(Protobuf_INCLUDE_DIR "C:/Users/praka/workspace/third-party/protobuf/install/Release/include")
+# set(Protobuf_PROTOC_EXECUTABLE "C:/Users/praka/workspace/third-party/protobuf/install/Release/bin/protoc.exe")
+# set(Protobuf_USE_STATIC_LIBS ON)
 
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+# Windows-specific compiler flags - commented out for Linux
+# set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+# set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 
 find_package(Protobuf REQUIRED)
 if (NOT Protobuf_FOUND)
@@ -69,7 +71,7 @@ add_custom_command(OUTPUT ${PROTO_CPP_SRCS_PATH}
 
 add_custom_target(dummy_target ALL DEPENDS ${PROTO_CPP_SRCS_PATH})
 
-add_executable(testApp test.cpp ${PROTO_CPP_SRCS_PATH})
-target_link_libraries(testApp ${Protobuf_LIBRARIES}/libprotobuf.lib)
+add_executable(app-wo-findprotobuf-testApp test.cpp ${PROTO_CPP_SRCS_PATH})
+target_link_libraries(app-wo-findprotobuf-testApp ${Protobuf_LIBRARIES})
 
 
